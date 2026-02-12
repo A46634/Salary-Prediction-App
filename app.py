@@ -2,7 +2,7 @@ import streamlit as st
 import joblib
 import numpy as np
 
-model = joblib.load("salary_predictor.joblib")
+model = joblib.load("./salary_predictor.joblib")
 
 st.title("💰 Salary Prediction App ")
 
@@ -31,3 +31,4 @@ if st.button("Predict Salary"):
 
     prediction = model.predict(df)[0]
     st.success(f"Estimated Salary 🤑: ${prediction:,.2f} USD")
+
